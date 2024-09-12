@@ -5,10 +5,10 @@ pipeline{
     environment {
         AWS_ACCOUNT_ID="221082203884"
         AWS_DEFAULT_REGION="us-east-1"
-        IMAGE_REPO_NAME="aws-ecr-node"
+        IMAGE_REPO_NAME="jenkins-repo"
         IMAGE_TAG="latest"
         
-        REPOSITORY_URI = "AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/aws-ecr-node"
+        REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
     }
    
     stages {
